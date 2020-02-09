@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
 </head>
 <body>
@@ -18,22 +19,30 @@
         <header class="jumbotron jumbotron-fluid">
                     <div class="container"> 
                         <div class="row row-content align-items-center">
+                           <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                            <img src="img/logo.png" class="img-fluid" alt="">
+                           </div>
                             <div class="col">
                                     <h1>NuCamp</h1>
                                     <h2>a better way to camp</h2>
                             </div>
+                            <div class="col col-md-4 col-xl-2">
+                                    <a href=""><button class="btn btn-info mt-4">Reserve Campsite</button></a>  
+                                  </div>
                         </div>
                     </div>
                    
                 
             </header>
-
+            
             <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
                 <div class="container">
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="nucampNavbar">
                         <span class="navbar-toggler-icon"> </span>
                     </button>
                     <div class="collapse navbar-collapse " id="nucampNavbar">
+                            <a class="navbar-brand" href="#"> <img src="img/logo.png" height="30" width="" alt=""></a>
+              
                 <ul class="navbar-nav">
                         <li class="nav-item active"> <a class="nav-link" href="#"> <i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li class="nav-item"> <a class="nav-link" href="aboutus.html"> <i class="fa fa-info fa-lg"></i> About</a></li>
@@ -45,36 +54,91 @@
                 </nav>
 
             <div class="container">
-                <div class="row row-content">
+                <div class="row row-content align-items-center">
                     <div class="col-sm-4 order-sm-last col-md-3">
                             <h2 class="text-sm-right">Discover & Review</h2>
                     </div>
                     <div class="col">
-                            <h3>Our Campsites</h3>
-                            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-                    </div>
+                            <div class="media">
+                                <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" width="10" />
+                                <div class="media-body align-self-center">
+                                    <h3>Our Campsites</h3>
+                                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             
-            <div class="row row-content">
+           <div class="row row-content align-items-center">
                 <div class="col-sm-4 col-md-3">
                         <h2>Featured Campsites</h2>
                 </div>
                 <div class="col">
-                        <h3>React Lake Campground</h3>
-                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                </div>
-            </div>
-            <div class="row row-content">
+                        <div class="media">
+                                <div class="media-body align-self-center">
+                                        <h3>React Lake Campground</h3>
+                                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>                  
+                                </div>
+                            <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail" />
+                               
+                            </div>
+                             </div>
+            </div>   
+            <div class="row row-content align-items-center">
                 <div class="col-sm-4 order-sm-last col-md-3">
                         <h2 class="text-sm-right">Our Community Partners</h2>
                 </div>
                 <div class="col">
-                        <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                </div>
-            </div>
+                        <div class="media">
+                            <img class="d-flex mr-3 img-thumbnail " src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
+                            <div class="media-body align-self-center">
+                                <h3>Bootstrap Outfitters</h3>
+                                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                            </div>
+                        </div>
+                    </div>
             </div>
             
+            
+             <div class="row row-content align-items-center">
+                <div class="col-sm-6 mx-auto">
+                    <div class="card">
+                        <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                        <div class="card-body">
+                            <form action="" id="reserveForm">
+                                <div class="row form-group">
+                                    <label for="numCampers" class="col-xs-4 col-sm-6 col-form-label">Number of Campers</label>
+                                    <div class="col col-sm-6">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label for="Date" class="col-xs-4 col-sm-6 col-form-label">Date</label>
+                                    <div class="col col-sm-6">
+                                        <input class="form-control" type="Date" name="date" id="Date" placeholder="1/1/2020">
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-primary" type="submit">Search</button>
+                                        </div>
+
+                                    </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         
             <footer>
                 <div class="container">
